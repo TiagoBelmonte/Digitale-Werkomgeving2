@@ -1,2 +1,4 @@
-From httpd:2.4 
-COPY ./demo-site /usr/local/apache2/htdocs/
+FROM httpd:latest 
+COPY html /usr/local/apache2/htdocs/
+WORKDIR /usr/local/apache2/htdocs/
+RUN date > buildtime.txt
